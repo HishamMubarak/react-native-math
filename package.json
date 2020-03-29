@@ -1,0 +1,34 @@
+{
+  "name": "react-native-math",
+  "version": "1.0.8",
+  "description": "Render math navitely in React Native using Katex for android",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native-math",
+    "react-native",
+    "math",
+    "android",
+    "math",
+    "formula",
+    "equation"
+  ],
+  "author": {
+    "name": "Hisham Mubaral",
+    "email": "parengalhisham@gmail.com"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": ">=0.55"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HishamMubarak/react-native-math"
+  },
+  "bugs": {
+    "url": "https://github.com/HishamMubarak/react-native-math/issues"
+  },
+  "devDependencies": {},
+}
