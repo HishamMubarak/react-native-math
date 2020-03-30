@@ -2,38 +2,16 @@
 # react-native-math
 
 
+##### Warning: This package does not available for iOS as of now
+
+This package currently does not support math for iOS. Feel free to send a pull request.
+Katex-iOS native package: https://github.com/ianarawjo/KaTeX-iOS
 
 ## Installation
 
 `$ npm install react-native-math --save`
 
-### Mostly automatic installation
 
-`$ react-native link react-native-math`
-
-### Manual installation
-
-
-#### iOS
-
-This package currently does not support math for iOS. Feel free to send a pull request.
-Katex-iOS native package: https://github.com/ianarawjo/KaTeX-iOS
-
-#### Android
-
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.reactlibrary.RNMathPackage;` to the imports at the top of the file
-  - Add `new RNMathPackage()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-math'
-  	project(':react-native-math').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-math/android')
-  	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-math')
-  	```
-	  
 ## Usage
 ```jsx
 
@@ -71,4 +49,31 @@ class MathItem extends React.Component {
 }
 ```
 
-![](https://i.imgur.com/wwpvZKE.png=40x)
+Expected Output https://i.imgur.com/wwpvZKE.png
+
+#### Supported Props
+
+| Prop           |     Default     |   Type   | Description                                                                                                 |
+| :------------- | :-------------: | :------: | :---------------------------------------------------------------------------------------------------------- |
+| style     |      -       |  `object`/`arrat`  | Default react nativ styles |
+| mathText           |      -       |  `string`  | Katex text (Make sure to escape \\ using two \\ slashes )|
+
+
+
+### Manual installation
+
+#### Android
+
+1. Open up `android/app/src/main/java/[...]/MainActivity.java`
+  - Add `import com.reactlibrary.RNMathPackage;` to the imports at the top of the file
+  - Add `new RNMathPackage()` to the list returned by the `getPackages()` method
+2. Append the following lines to `android/settings.gradle`:
+  	```
+  	include ':react-native-math'
+  	project(':react-native-math').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-math/android')
+  	```
+3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
+  	```
+      compile project(':react-native-math')
+  	```
+	  
