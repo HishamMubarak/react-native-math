@@ -1,20 +1,66 @@
 
 # react-native-math
 
-## Getting started
+
+##### Warning: This package does not available for iOS as of now
+
+This package currently does not support math for iOS. Feel free to send a pull request.
+Katex-iOS native package: https://github.com/ianarawjo/KaTeX-iOS
+
+## Installation
 
 `$ npm install react-native-math --save`
 
-### Mostly automatic installation
 
-`$ react-native link react-native-math`
+## Usage
+```jsx
+
+import React from 'react'
+import { View } from 'react-native'
+import RNMath from 'react-native-math';
+
+class MathItem extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, margin: 20 }}>
+        <RNMath
+          mathText={`Dissolve this $x=\\frac{1+y}{1+2z^2}$ using lorem ipsum dolor sit amet`}
+          style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
+        />
+
+        <RNMath
+          mathText={`$x=\\frac{1+y}{1+2z^2}$`}
+          style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
+        />
+
+        <RNMath
+          mathText={`sum of ratios =4+3=7 $=\\frac{4}{7}\\times560=320$`}
+          style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
+        />
+
+        <RNMath
+          mathText={` <p>If <span class="latexEle" data-latex="x:35::48:60">$x:35::48:60$</span><span></p>`}
+          style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
+        />
+        
+      </View>
+    )
+  }
+}
+```
+
+Expected Output https://i.imgur.com/wwpvZKE.png
+
+#### Supported Props
+
+| Prop           |     Default     |   Type   | Description                                                                                                 |
+| :------------- | :-------------: | :------: | :---------------------------------------------------------------------------------------------------------- |
+| style     |      -       |  `object`/`arrat`  | Default react nativ styles |
+| mathText           |      -       |  `string`  | Katex text (Make sure to escape \\ using two \\ slashes )|
+
+
 
 ### Manual installation
-
-
-#### iOS
-
-This package currently does not support math for iOS. Feel free to send a pull request
 
 #### Android
 
@@ -31,8 +77,3 @@ This package currently does not support math for iOS. Feel free to send a pull r
       compile project(':react-native-math')
   	```
 	  
-## Usage
-```javascript
-import RNMath from 'react-native-math';
-
-// TODO: What to do with the module?
