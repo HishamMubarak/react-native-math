@@ -3,6 +3,7 @@ package com.RNMath;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 
@@ -14,23 +15,27 @@ import com.facebook.react.bridge.ReactContext;
 public class MathComponent extends MathView {
 
     public String mathString = "";
+    public Integer fontSize = 20;
+    public String color = "#000000";
 
     public void setString (String mathText){
         mathString = mathText;
         updateText();
     }
 
+    public void setFontSize (Integer textSize){
+        fontSize = textSize;
+        updateText();
+    }
+
+    public void setColor (String textColor) {
+        color = textColor;
+        updateText();
+    }
+
     public MathComponent(Context context) {
         super(context);
-//        this.setTextColor(Color.BLUE);
-//        this.setText();
-//        this.setDisplayText(mathString);
-//        this.setDisplayText(getResources().getString(R.string.runtime_formula));
-//        this.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-        this.setClickable(true);
-        this.setTextSize(14);
-        this.setTextColor(android.R.color.white);
-        this.setViewBackgroundColor(android.R.color.black);
+    //    this.setClickable(true);
         updateText();
     }
 
@@ -39,7 +44,9 @@ public class MathComponent extends MathView {
     }
 
     private void updateText() {
+        setTextSize(fontSize);
         setDisplayText(mathString);
+        setTextColor(Color.parseColor(color));
     }
 
 }
