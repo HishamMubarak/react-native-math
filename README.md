@@ -96,7 +96,7 @@ Only required for React Native versions less than 0.60
 ### Known issues
 
 #### 1. The flex requirement
-Native UI modiles requies to have the style of the native view and all it's parents to have a style flex property of 1 or greater. The workaround is pretty simple, add flex:1 or any other value to flex property to all the parent views of the math component.
+Native UI modules requires to have the style of the native view and all it's parents to have a style flex property of 1 or greater. The workaround is pretty simple, add flex:1 or any other value to flex property to all the parent views of the math component.
 
 #### 2. The scroll issue
 When you have set a flex value to the math component and the text you passed to it exceeds the height of your flex size, the content out of margin will be not visible. To go around this issue, add math component inside a ScrollView, which make the math text scrollable within the available flex area. 
