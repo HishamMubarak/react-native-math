@@ -7,7 +7,7 @@ There are a few other packages out there to render math equations in React Nativ
 
 PR's and issues are always welcome :)
 
-##### Warning: This package does not available for iOS as of now
+##### Warning: This package does not support for iOS as of now
 
 This package currently does not support math for iOS. Feel free to send a pull request.
 Katex-iOS native package: https://github.com/ianarawjo/KaTeX-iOS
