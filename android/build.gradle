@@ -48,6 +48,6 @@ repositories {
 
 dependencies {
     implementation "com.facebook.react:react-native:${safeExtGet('reactNativeVersion', '+')}"
-    implementation 'in.hourglass.mathrender:katexmathview:1.0.2'
+    implementation 'in.hourglass.mathrender:katexmathview:1.0.3'
 }
   
