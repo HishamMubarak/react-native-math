@@ -1,6 +1,5 @@
-// types/index.d.ts
-
 import { ViewStyle } from 'react-native';
+import React from 'react';
 
 export interface MathViewProps {
     /**
@@ -11,15 +10,19 @@ export interface MathViewProps {
     /**
      * Text size
      */
-    textSize: number;
+    textSize?: number;
 
     /**
-     * KateX content
+     * KaTeX content
      */
     content: string;
 
     /**
      * Text color
      */
-    textColor: string;
+    textColor?: string;
 }
+
+declare const MathView: React.FC<MathViewProps>;
+
+export default MathView;
