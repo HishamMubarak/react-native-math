@@ -7,15 +7,9 @@ There are a few other packages out there to render math equations in React Nativ
 
 PR's and issues are always welcome :)
 
-##### Warning: This package does not support for iOS as of now
-
-This package currently does not support math for iOS. Feel free to send a pull request.
-Katex-iOS native package: https://github.com/ianarawjo/KaTeX-iOS
-
 ## Installation
 
 `$ npm install react-native-math --save`
-
 
 ## Usage
 ```jsx
@@ -72,31 +66,3 @@ Expected Output https://i.imgur.com/wwpvZKE.png
 | value           |      ""       |  `string`  | Katex text (Make sure to escape \\ using two \\ slashes )|
 | textSize           |      20       |  `number`  | Font size of the math equation Ex:10 |
 | textColor           |      `#000000`       |  `hex color`  | Pass 6 character hex color value |
-
-
-### Manual installation
-
-Only required for React Native versions less than 0.60
-
-#### Android
-
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.reactlibrary.RNMathPackage;` to the imports at the top of the file
-  - Add `new RNMathPackage()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-math'
-  	project(':react-native-math').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-math/android')
-  	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-math')
-  	```
-	  
-### Known issues
-
-#### 1. The flex requirement
-Native UI modules requires to have the style of the native view and all it's parents to have a style flex property of 1 or greater. The workaround is pretty simple, add flex:1 or any other value to flex property to all the parent views of the math component.
-
-#### 2. The scroll issue
-When you have set a flex value to the math component and the text you passed to it exceeds the height of your flex size, the content out of margin will be not visible. To go around this issue, add math component inside a ScrollView, which make the math text scrollable within the available flex area. 
