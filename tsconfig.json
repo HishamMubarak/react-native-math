@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+      "target": "esnext", // Specify ECMAScript target version.
+      "module": "esnext", // Specify module code generation.
+      "jsx": "react-native", // JSX support for React Native.
+      "strict": true, // Enable all strict type-checking options.
+      "moduleResolution": "node", // Module resolution strategy.
+      "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export.
+      "esModuleInterop": true, // Enables emit interoperability between CommonJS and ES Modules.
+      "skipLibCheck": true, // Skip type checking of declaration files.
+      "forceConsistentCasingInFileNames": true, // Ensure file names are in the correct case.
+      "resolveJsonModule": true, // Support for importing .json files.
+      "isolatedModules": true, // Ensure all files are compiled as modules.
+      "strictNullChecks": true, // Enable strict null checks.
+      "noImplicitAny": true, // Raise error on expressions and declarations with an implied `any` type.
+      "noUnusedLocals": true, // Report errors on unused local variables.
+      "noUnusedParameters": true, // Report errors on unused function parameters.
+      "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statements.
+      "noImplicitReturns": true, // Report error when not all code paths in function return a value.
+      "typeRoots": ["./node_modules/@types"], // Specify the root directory of type definitions.
+      "baseUrl": ".", // Base directory to resolve non-relative module names.
+      "outDir": "./dist", // Output directory for compiled files.
+      "declaration": true, // Generate declaration files (.d.ts) for TypeScript.
+      "declarationDir": "./dist/types" // Specify directory for declaration files.
+    },
+    "include": [
+      "index.tsx" // Include all .ts and .tsx files in the src folder.
+    ],
+    "exclude": [
+      "node_modules" // Exclude node_modules from compilation.
+    ]
+  }
+  
