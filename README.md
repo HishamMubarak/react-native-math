@@ -6,6 +6,11 @@ There are a few other packages out there to render math equations in React Nativ
 
 PR's and issues are always welcome :)
 
+##### Warning: This package does not support for iOS as of now
+
+This package currently does not support math for iOS. Feel free to send a pull request.
+Katex-iOS native package: https://github.com/ianarawjo/KaTeX-iOS
+
 ## Installation
 
 `$ npm install react-native-math react-native-webview`
@@ -70,3 +75,10 @@ Expected Output https://i.imgur.com/wwpvZKE.png
 | content     |    ""     |     `string`     | Katex text (Make sure to escape \\ using two \\ slashes ) |
 | textSize  |    20     |     `number`     | Font size of the math equation Ex:10                      |
 | textColor | `#000000` |   `hex color`    | Pass 6 character hex color value                          |
+
+
+### Known issues
+
+#### 1. The flex requirement
+
+Native UI modules requires to have the style of the native view and all it's parents to have a style flex property of 1 or greater. The workaround is pretty simple, add flex:1 or any other value to flex property to all the parent views of the math component.
