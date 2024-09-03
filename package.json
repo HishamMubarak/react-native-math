@@ -1,13 +1,19 @@
 {
   "name": "react-native-math",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Render math natively in React Native using Katex for Android and iOS",
   "main": "dist/index.js",
-  "types": "types/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "prepare": "npm run build",
-    "test": "jest"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": {
+    "name": "Hisham Mubarak",
+    "email": "parengalhisham@gmail.com"
   },
   "keywords": [
     "react-native-math",
@@ -18,14 +24,10 @@
     "formula",
     "equation"
   ],
-  "author": {
-    "name": "Hisham Mubaral",
-    "email": "parengalhisham@gmail.com"
-  },
   "license": "MIT",
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-native": ">=0.70.0"
+    "react": "*",
+    "react-native": "*"
   },
   "repository": {
     "type": "git",
@@ -36,11 +38,11 @@
     "url": "https://github.com/HishamMubarak/react-native-math/issues"
   },
   "dependencies": {
-    "react-native-autoheight-webview": "^1.6.5"
+    "react-native-autoheight-webview": "^1.6.5",
+    "react-native-webview": "^13.12.1"
   },
   "devDependencies": {
-    "@types/react": "^18.0.0",
-    "@types/react-native": "^0.70.0",
-    "typescript": "^4.9.5"
+    "@types/react": "^18.3.5",
+    "typescript": "^4.0.0"
   }
 }
