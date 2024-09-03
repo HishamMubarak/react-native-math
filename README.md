@@ -1,4 +1,3 @@
-
 # react-native-math
 
 ##### Why this package?
@@ -9,9 +8,10 @@ PR's and issues are always welcome :)
 
 ## Installation
 
-`$ npm install react-native-math --save`
+`$ npm install react-native-math react-native-webview`
 
 ## Usage
+
 ```jsx
 
 import React from 'react'
@@ -23,33 +23,37 @@ class MathItem extends React.Component {
     return (
       <View style={{ flex: 1, margin: 20 }}>
         <MathText
-          value={`Dissolve this $x=\\frac{1+y}{1+2z^2}$ using lorem ipsum dolor sit amet`}
+          content={`
+            $$E = mc^2$$
+            $2^{1+2}$
+            Here is an inline equation: $a^2 + b^2 = c^2$
+            <p>Additional HTML content can go here.</p>
+          `}
+          textSize={20}
+          textColor={"#333"}
           style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-          textSize={25}
-          textColor={"#f2f2f2}
         />
 
         <MathText
-          value={`$x=\\frac{1+y}{1+2z^2}$`}
+          content={`Dissolve this $x=\\frac{1+y}{1+2z^2}$ using lorem ipsum dolor sit amet`}
+          textSize={20}
+          textColor={"#333"}
           style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-          textSize={15}
-          textColor={"#ff0000}
         />
 
         <MathText
-          value={`sum of ratios =4+3=7 $=\\frac{4}{7}\\times560=320$`}
+          content={`sum of ratios =4+3=7 $=\\frac{4}{7}\\times560=320$`}
+          textSize={20}
+          textColor={"#333"}
           style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-          textSize={15}
-          textColor={"#ff0000}
         />
 
         <MathText
-          value={` <p>If <span class="latexEle" data-latex="x:35::48:60">$x:35::48:60$</span><span></p>`}
+          content={`$x=\\frac{1+y}{1+2z^2}$`}
+          textSize={20}
+          textColor={"#333"}
           style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-          textSize={15}
-          textColor={"#ff0000}
         />
-        
       </View>
     )
   }
@@ -60,9 +64,9 @@ Expected Output https://i.imgur.com/wwpvZKE.png
 
 ### Supported Props
 
-| Prop           |     Default     |   Type   | Description                                                                                                 |
-| :------------- | :-------------: | :------: | :---------------------------------------------------------------------------------------------------------- |
-| style     |      {}       |  `object`/`array`  | Default react native styles (Pass background color here) |
-| value           |      ""       |  `string`  | Katex text (Make sure to escape \\ using two \\ slashes )|
-| textSize           |      20       |  `number`  | Font size of the math equation Ex:10 |
-| textColor           |      `#000000`       |  `hex color`  | Pass 6 character hex color value |
+| Prop      |  Default  |       Type       | Description                                               |
+| :-------- | :-------: | :--------------: | :-------------------------------------------------------- |
+| style     |    {}     | `object`/`array` | Default react native styles (Pass background color here)  |
+| content     |    ""     |     `string`     | Katex text (Make sure to escape \\ using two \\ slashes ) |
+| textSize  |    20     |     `number`     | Font size of the math equation Ex:10                      |
+| textColor | `#000000` |   `hex color`    | Pass 6 character hex color value                          |
